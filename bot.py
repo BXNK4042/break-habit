@@ -73,11 +73,15 @@ async def on_message(message):
         difference_hour = difference.total_seconds() / 3600
         await message.channel.send(f"It’s been {difference_hour:.0f} hours since that time.")
 
+# unused feature
+'''
     if message.content.startswith("!quotes"):
         with open("quotes.json", "r") as file:
             data = json.load(file)
             quote = random.choice(data["quotes"])
             await message.channel.send(quote)
+'''
+
 
 
 client.run(os.getenv("DISCORD_TOKEN"))
